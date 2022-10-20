@@ -1,7 +1,7 @@
 import json
 
 
-def open_file(file_name: str):
+def create_dict_from_file(file_name: str) -> dict:
     result = {}
     with open(file_name) as file:
         for line in file:
@@ -21,7 +21,7 @@ def print_dict_partial(dictionary: dict, num_items: int = 10):
 
 
 def main():
-    purchases = open_file('purchase_log.txt')
+    purchases = create_dict_from_file('purchase_log.txt')
     print_dict_partial(purchases)
 
 
